@@ -9,6 +9,10 @@ import {PolyArea} from '../model/PolyArea.js';
 
 
 // Import converters
+import {HumanAreasConverter} from '../bot_api_converters/human/human_areas_converter.js';
+import {HumanPathConverter} from '../bot_api_converters/human/human_path_converter.js';
+import {HumanPolyAreaConverter} from '../bot_api_converters/human/human_polyarea_converter.js';
+
 import {OSBotAreasConverter} from '../bot_api_converters/osbot/osbot_areas_converter.js';
 import {OSBotPathConverter} from '../bot_api_converters/osbot/osbot_path_converter.js';
 import {OSBotPolyAreaConverter} from '../bot_api_converters/osbot/osbot_polyarea_converter.js';
@@ -34,6 +38,11 @@ import {RuneMatePathConverter} from '../bot_api_converters/runemate/runemate_pat
 import {RuneMatePolyAreaConverter} from '../bot_api_converters/runemate/runemate_polyarea_converter.js';
 
 var converters = {
+    "Human": {
+        "areas_converter": new HumanAreasConverter(),
+        "path_converter": new HumanPathConverter(),
+        "polyarea_converter": new HumanPolyAreaConverter()
+    },
     "OSBot": {
         "areas_converter": new OSBotAreasConverter(),
         "path_converter": new OSBotPathConverter(),
